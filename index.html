@@ -11,17 +11,20 @@
             flex-direction: column;
            width: 300px;
             margin: 0 auto;
-
+        }
+        body.dark-mode{
+            background-color: #415a77;
+            color: white;
         }
     </style>
 </head>
-<body>
-
+<body id="toggleBody">
+    <button id="toggleColor"></button>
     <div class="container">
         <form action="/action">
         <h1>Enter a cat's name:</h1>
         <input type="text" id="catName">
-       <button>Submit</button>
+       <button id="btnSubmit">Submit</button>
     </form>
     </div>
    

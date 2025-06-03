@@ -1,8 +1,12 @@
-const button = document.querySelector('button');
+const button = document.getElementById('btnSubmit');
 const input = document.getElementById('catName');
 const list = document.getElementById('petList');
 const form = document.querySelector('form');
 const error = document.createElement('p');
+const toggleBtn= document.getElementById('toggleColor');
+const body= document.getElementById('toggleBody');
+var btnText = 'Enable Dark Mode';
+toggleBtn.innerText = btnText;
 
 button.addEventListener('click', (e) => {
     e.preventDefault();
@@ -20,3 +24,14 @@ button.addEventListener('click', (e) => {
     input.value = '';
     error.style.display = 'none'; // hide error after successful input
 });
+
+toggleBtn.addEventListener('click', () =>{
+  if (body.classList.contains('dark-mode')) {
+    body.classList.remove('dark-mode');
+    toggleBtn.innerText = btnText;
+  }
+  else{
+    body.classList.add('dark-mode');
+    toggleBtn.innerText = 'Disable Dark Mode';
+  }
+})
